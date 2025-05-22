@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CETRAK CETREK LAMPU SESI 4</title>
+</head>
+
+<body>
+    <img src="assets/images/off.gif" alt="" id="lampu1" />
+    <h1>CETREKAN LAMPU ON OFF BRO</h1>
+    <button onclick="saklar('on')">NYALAKAN LAMPU</button>
+
+    <!-- ini adalah script js kita -->
+    <script>
+        function saklar(params) {
+            console.log('testing saklarnya...');
+            let lampu1 = document.getElementById('lampu1');
+            console.log(lampu1.src); 
+        }
+    </script>
+</body>
+
+</html>
