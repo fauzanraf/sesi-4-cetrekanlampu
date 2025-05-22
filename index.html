@@ -12,45 +12,188 @@
 
 <body>
     <div class="flex items-center justify-center min-h-screen w-full bg-gray-800 gap-10">
-        <!-- lampu 1 -->
-        <div class="flex flex-col gap-2 py-4 items-center">
-            <img src="assets/images/off.gif" alt="" id="lampu1" style="width: 20vw; height: 60vh;" />
-            <div style="height: 2rem;"></div>
-            <!-- TOGGLE 1 START -->
-            <!-- using flowbite as tailwind css component, there is also hyperui but on the video when it is released, there is no toggle so flowbite was used instead -->
-            <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
-                <input type="checkbox" id="default-toggle1" class="sr-only peer" onchange="saklar()">
-                <div
-                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+        <div class="flex flex-col gap-8">
+            <!-- RUANGAN KELUARGA -->
+            <div class="mb-6">
+                <div class="flex items-center justify-center mb-4 gap-4">
+                    <h2 class="text-white text-xl font-bold text-center">RUANGAN KELUARGA</h2>
+                    <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.2);">
+                        <input type="checkbox" id="group-toggle-keluarga" class="sr-only peer"
+                            onchange="toggleGroup('keluarga')">
+                        <div
+                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                        </div>
+                    </label>
                 </div>
-            </label>
-            <!-- TOGGLE 1 END -->
-        </div>
-        <!-- lampu 1 end -->
-        <!-- lampu 2 -->
-        <div class="flex flex-col gap-2 py-4 items-center">
-            <img src="assets/images/off.gif" alt="" id="lampu2" style="width: 20vw; height: 60vh;" />
-            <div style="height: 2rem;"></div>
-            <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
-                <input type="checkbox" id="default-toggle2" class="sr-only peer" onchange="saklar()">
-                <div
-                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                <div class="flex gap-10 justify-center">
+                    <!-- Lampu 1 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu1" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle1" class="sr-only peer group-keluarga"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Lampu 2 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu2" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle2" class="sr-only peer group-keluarga"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Lampu 3 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu3" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle3" class="sr-only peer group-keluarga"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
                 </div>
-            </label>
-        </div>
-        <!-- lampu 2 end -->
-        <!-- lampu 3 -->
-        <div class="flex flex-col gap-2 py-4 items-center">
-            <img src="assets/images/off.gif" alt="" id="lampu3" style="width: 20vw; height: 60vh;" />
-            <div style="height: 2rem;"></div>
-            <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
-                <input type="checkbox" id="default-toggle3" class="sr-only peer" onchange="saklar()">
-                <div
-                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+            </div>
+            <!-- RUANGAN MAKAN -->
+            <div class="mb-6">
+                <div class="flex items-center justify-center mb-4 gap-4">
+                    <h2 class="text-white text-xl font-bold text-center">RUANGAN MAKAN</h2>
+                    <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.2);">
+                        <input type="checkbox" id="group-toggle-makan" class="sr-only peer"
+                            onchange="toggleGroup('makan')">
+                        <div
+                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                        </div>
+                    </label>
                 </div>
-            </label>
+                <div class="flex gap-10 justify-center">
+                    <!-- Lampu 4 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu4" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle4" class="sr-only peer group-makan"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- RUANGAN TIDUR -->
+            <div class="mb-6">
+                <div class="flex items-center justify-center mb-4 gap-4">
+                    <h2 class="text-white text-xl font-bold text-center">RUANGAN TIDUR</h2>
+                    <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.2);">
+                        <input type="checkbox" id="group-toggle-tidur" class="sr-only peer"
+                            onchange="toggleGroup('tidur')">
+                        <div
+                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                        </div>
+                    </label>
+                </div>
+                <div class="flex gap-10 justify-center">
+                    <!-- Lampu 5 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu5" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle5" class="sr-only peer group-tidur"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Lampu 6 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu6" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle6" class="sr-only peer group-tidur"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- RUANGAN TAMU -->
+            <div class="mb-6">
+                <div class="flex items-center justify-center mb-4 gap-4">
+                    <h2 class="text-white text-xl font-bold text-center">RUANGAN TAMU</h2>
+                    <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.2);">
+                        <input type="checkbox" id="group-toggle-tamu" class="sr-only peer"
+                            onchange="toggleGroup('tamu')">
+                        <div
+                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                        </div>
+                    </label>
+                </div>
+                <div class="flex gap-10 flex-wrap justify-center">
+                    <!-- Lampu 7 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu7" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle7" class="sr-only peer group-tamu"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Lampu 8 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu8" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle8" class="sr-only peer group-tamu"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Lampu 9 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu9" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle9" class="sr-only peer group-tamu"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Lampu 10 -->
+                    <div class="flex flex-col gap-2 py-4 items-center">
+                        <img src="assets/images/off.gif" alt="" id="lampu10" />
+                        <div style="height: 2rem;"></div>
+                        <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                            <input type="checkbox" id="default-toggle10" class="sr-only peer group-tamu"
+                                onchange="saklar()">
+                            <div
+                                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- lampu 3 end -->
     </div>
 
     <!-- ini adalah script js kita -->

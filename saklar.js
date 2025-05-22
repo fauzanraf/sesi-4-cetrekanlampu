@@ -1,27 +1,39 @@
-function saklar(action, lamp) {
-    let toggle1 = document.getElementById('default-toggle1');
-    let toggle2 = document.getElementById('default-toggle2');
-    let toggle3 = document.getElementById('default-toggle3');
-
-    let lampu1 = document.getElementById('lampu1');
-    let lampu2 = document.getElementById('lampu2');
-    let lampu3 = document.getElementById('lampu3');
-
-    if (toggle1.checked) {
-        lampu1.src = "assets/images/on.gif";
-    } else {
-        lampu1.src = "assets/images/off.gif";
+function saklar() {
+    for (let i = 1; i <= 10; i++) {
+        let checkbox = document.getElementById('default-toggle' + i);
+        let lampu = document.getElementById('lampu' + i);
+        if (checkbox && lampu) {
+            lampu.src = checkbox.checked ? 'assets/images/on.gif' : 'assets/images/off.gif';
+        }
     }
+    // Sync group toggles with their children
+    syncGroupToggles();
+}
 
-    if (toggle2.checked) {
-        lampu2.src = "assets/images/on.gif";
-    } else {
-        lampu2.src = "assets/images/off.gif";
-    }
+function toggleGroup(group) {
+    let checkboxes = document.querySelectorAll('.group-' + group);
+    let groupToggle = document.getElementById('group-toggle-' + group);
+    checkboxes.forEach(cb => {
+        cb.checked = groupToggle.checked;
+    });
+    saklar();
+}
 
-    if (toggle3.checked) {
-        lampu3.src = "assets/images/on.gif";
-    } else {
-        lampu3.src = "assets/images/off.gif";
-    }
+function syncGroupToggles() {
+    // keluarga
+    let keluargaCbs = document.querySelectorAll('.group-keluarga');
+    let keluargaToggle = document.getElementById('group-toggle-keluarga');
+    keluargaToggle.checked = Array.from(keluargaCbs).every(cb => cb.checked);
+    // makan
+    let makanCbs = document.querySelectorAll('.group-makan');
+    let makanToggle = document.getElementById('group-toggle-makan');
+    makanToggle.checked = Array.from(makanCbs).every(cb => cb.checked);
+    // tidur
+    let tidurCbs = document.querySelectorAll('.group-tidur');
+    let tidurToggle = document.getElementById('group-toggle-tidur');
+    tidurToggle.checked = Array.from(tidurCbs).every(cb => cb.checked);
+    // tamu
+    let tamuCbs = document.querySelectorAll('.group-tamu');
+    let tamuToggle = document.getElementById('group-toggle-tamu');
+    tamuToggle.checked = Array.from(tamuCbs).every(cb => cb.checked);
 }
