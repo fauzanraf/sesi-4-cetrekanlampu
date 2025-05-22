@@ -5,53 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CETRAK CETREK LAMPU SESI 4</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="/dist/styles.css">
 </head>
 
 <body>
     <div class="flex items-center justify-center min-h-screen w-full bg-gray-800 gap-10">
         <!-- lampu 1 -->
-        <div class="flex flex-col gap-2 py-4">
-            <img src="assets/images/off.gif" alt="" id="lampu1" />
+        <div class="flex flex-col gap-2 py-4 items-center">
+            <img src="assets/images/off.gif" alt="" id="lampu1" style="width: 20vw; height: 60vh;" />
+            <div style="height: 2rem;"></div>
             <!-- TOGGLE 1 START -->
             <!-- using flowbite as tailwind css component, there is also hyperui but on the video when it is released, there is no toggle so flowbite was used instead -->
-            <label class="inline-flex items-center cursor-pointer">
-                <input type="checkbox" value="" class="sr-only peer">
+            <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                <input type="checkbox" id="default-toggle1" class="sr-only peer" onchange="saklar()">
                 <div
                     class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
                 </div>
-                <span class="ms-3 text-sm font-medium text-white dark:text-gray-300">SAKLAR LAMPU 1</span>
             </label>
             <!-- TOGGLE 1 END -->
-            <button onclick="saklar('on', 1)"
-                class="inline-flex items-center gap-2 rounded-sm border border-sky-200 bg-sky-200 px-8 py-3 text-black hover:bg-white hover:text-black-200 focus:ring-3 focus:outline-hidden">NYALAKAN
-                LAMPU 1</button>
-            <button onclick="saklar('off', 1)"
-                class="inline-flex items-center gap-2 rounded-sm border border-red-300 bg-red-300 px-8 py-3 text-black hover:bg-white hover:text-black-200 focus:ring-3 focus:outline-hidden">MATIKAN
-                LAMPU 1</button>
         </div>
         <!-- lampu 1 end -->
         <!-- lampu 2 -->
-        <div class="flex flex-col gap-2 py-4">
-            <img src="assets/images/off.gif" alt="" id="lampu2" />
-            <button onclick="saklar('on', 2)"
-                class="inline-flex items-center gap-2 rounded-sm border border-sky-200 bg-sky-200 px-8 py-3 text-black hover:bg-white hover:text-black-200 focus:ring-3 focus:outline-hidden">NYALAKAN
-                LAMPU 2</button>
-            <button onclick="saklar('off', 2)"
-                class="inline-flex items-center gap-2 rounded-sm border border-red-300 bg-red-300 px-8 py-3 text-black hover:bg-white hover:text-black-200 focus:ring-3 focus:outline-hidden">MATIKAN
-                LAMPU 2</button>
+        <div class="flex flex-col gap-2 py-4 items-center">
+            <img src="assets/images/off.gif" alt="" id="lampu2" style="width: 20vw; height: 60vh;" />
+            <div style="height: 2rem;"></div>
+            <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                <input type="checkbox" id="default-toggle2" class="sr-only peer" onchange="saklar()">
+                <div
+                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                </div>
+            </label>
         </div>
         <!-- lampu 2 end -->
         <!-- lampu 3 -->
-        <div class="flex flex-col gap-2 py-4">
-            <img src="assets/images/off.gif" alt="" id="lampu3" />
-            <button onclick="saklar('on', 3)"
-                class="inline-flex items-center gap-2 rounded-sm border border-sky-200 bg-sky-200 px-8 py-3 text-black hover:bg-white hover:text-black-200 focus:ring-3 focus:outline-hidden">NYALAKAN
-                LAMPU 3</button>
-            <button onclick="saklar('off', 3)"
-                class="inline-flex items-center gap-2 rounded-sm border border-red-300 bg-red-300 px-8 py-3 text-black hover:bg-white hover:text-black-200 focus:ring-3 focus:outline-hidden">MATIKAN
-                LAMPU 3</button>
+        <div class="flex flex-col gap-2 py-4 items-center">
+            <img src="assets/images/off.gif" alt="" id="lampu3" style="width: 20vw; height: 60vh;" />
+            <div style="height: 2rem;"></div>
+            <label class="inline-flex items-center cursor-pointer" style="transform: scale(1.5);">
+                <input type="checkbox" id="default-toggle3" class="sr-only peer" onchange="saklar()">
+                <div
+                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
+                </div>
+            </label>
         </div>
         <!-- lampu 3 end -->
     </div>
